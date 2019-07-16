@@ -1,0 +1,10 @@
+table tbody tr td.text-overfollow {
+    max-width: 150px;
+}
+.table tbody tr td,
+.table thead tr th {
+    white-space: nowrap;
+}
+.searchDate{
+	cursor: pointer;
+}

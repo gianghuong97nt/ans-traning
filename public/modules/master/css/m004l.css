@@ -1,0 +1,12 @@
+table tbody tr td.text-overfollow {
+    max-width: 200px;
+}
+.table tbody tr td,
+.table thead tr th {
+    white-space: nowrap;
+}
+@media screen and (max-width:768px) {
+    .panel-body .form-group {
+        margin-right: 0px !important;
+    }
+}

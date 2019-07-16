@@ -1,0 +1,76 @@
+.label_bookmark {
+    padding-left: 0px;
+    padding-right:0px;
+}
+.bookmark {
+    padding-left: 0px;
+    padding-right:0px;
+}
+
+.bookmark ul {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.bookmark > ul > li > a {
+    display: block;
+    background:#006898;
+    color:#fff;
+    height: 25px;
+}
+/*.bookmark > ul > li > a:hover {
+    background:#09a6ff;
+}*/
+.bookmark > ul > li > a:hover {
+    background: #0990ce ;
+}
+.bookmark > ul > li > a:hover .bookmark_cd {
+    border-right:1px white solid;
+    height: 25px;
+    background: #006898;
+    color: white;
+}
+.bookmark > ul > li > a > .bookmark_cd {
+    display: inline-block;
+    border-right:1px solid black;
+    padding: 2px 11px;
+    margin-right: 5px;
+    width: 40px;
+    text-align: center;
+}
+.bookmark > ul > li > a > .bookmark_cd:after {
+    background: #fff;
+    display: block;
+}
+
+.navbar-menu ul>li>a{
+    padding-bottom: 0px;
+    width: 130px;
+}
+
+.bookmark > ul > li {
+    float:left;
+    width: 20%;
+    list-style: none;
+    padding: 2px 1px;
+    /* height: 25px; */
+    /* margin-bottom: -12px; */
+}
+.bookmark_cd {
+    cursor: context-menu;
+}
+
+
+@media (max-width: 1225px) {
+    .bookmark > ul > li{
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .bookmark > ul > li{
+        width: 100%;
+    }
+}

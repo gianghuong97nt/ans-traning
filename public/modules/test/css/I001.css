@@ -1,0 +1,44 @@
+.ht_master tbody tr:first-child td{
+	border-top-color:#ddd;
+	border-bottom-color: #ddd;
+}
+
+.ht_master td:last-child, .ht_clone_top th:last-child, .ht_clone_top td:last-child{
+	border-right-color:#ddd; 
+}
+
+.ht_master tbody tr:last-child th, .ht_clone_left tbody tr:last-child th, .ht_master tbody tr:last-child td, .ht_clone_left tbody tr:last-child td{
+	border-bottom-color: #ddd;
+}
+
+table tbody tr:nth-child(1){
+	cursor: pointer;
+}
+
+.a-and-b>input:nth-child(1){
+	width: 100px;
+	float: left;
+}
+
+.a-and-b>span:nth-child(2){
+	margin-left: 4px;
+	margin-right: 4px;
+	float: left;
+}
+
+.a-and-b>input:nth-child(3){
+	width: 60px;
+	float: left;
+}
+
+.fixed-select{
+	width: 100px!important;
+}
+
+.radio-inline, .checkbox-inline{
+	margin-left: 5px;
+}
+
+textarea{
+	resize: none;
+}

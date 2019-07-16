@@ -1,0 +1,22 @@
+.blue{
+	background-color:#006898; 
+	color: white ;
+}
+.inline-block{
+display: flex;
+}
+.btn-transparent {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+.btn-pointer{
+	padding-top: 3px;
+  	pointer-events: none;
+}
+.input-group .form-control.is-icon {
+    padding-right: 30px;
+}

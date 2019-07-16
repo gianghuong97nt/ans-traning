@@ -1,0 +1,18 @@
+.fix-selected{
+	width: 100px!important;
+}
+
+.fix-selected-1{
+	width: 160px;
+}
+.fix_size .popup .allow-content input{
+	width: 99px!important;
+}
+.fix_size .popup .allow-content .city_nm{
+	padding-left: 33px!important;
+}
+@media screen and (max-width:768px) {
+	.panel-body .form-group {
+		margin-right: 0px !important;
+	}
+}
