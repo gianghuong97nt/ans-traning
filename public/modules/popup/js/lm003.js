@@ -1,11 +1,12 @@
 var btnid = $('#btnid').attr('btnid').trim();
 var istable = $('#istable').attr('istable').trim();
 var _obj = {
-      'emp_cd'          : {'type': 'text', 'attr': {'maxlength': '50'    , 'class': 'numeric'}}
+      'emp_nm'          : {'type': 'text', 'attr': {'maxlength': '30'    , 'class': ''}}
+ ,    'emp_div'         : {'type': 'text', 'attr': {'maxlength': '2'    , 'class': ''}}
+ ,    'section_cd'      : {'type': 'text', 'attr': {'maxlength': '8'    , 'class': 'numeric'}}
 };
 $(document).ready(function () {
     try {
-        initialize();
         initItem(_obj);
         initEvents();
         initTrigger();
@@ -13,37 +14,17 @@ $(document).ready(function () {
         alert('ready: ' + e.message);
     }
 });
-/**
- * initTrigger
- *
- * @author      : ANS-ASIA QUYND - 2017/12/08 - create
- */
+
 function initTrigger() {
     try {
-        if($('#searchFlag').val()=='1'){
+        if($('#searchFlag').val()==1){
             search(1);
         }
     } catch (e) {
         alert('iniTrigger' + e.message);
     }
 }
-/**
- * initialize
- *
- * @author      : ANS-ASIA QUYND - 2017/12/08 - create
- */
-function initialize() {
-    try {
 
-    } catch (e) {
-        alert('initialize: ' + e.message);
-    }
-}
-/**
- * initEvents
- *
- * @author      : ANS-ASIA QUYND - 2017/12/08 - create
- */
 function initEvents() {
     try {
         //refresh search condition
@@ -85,32 +66,10 @@ function initEvents() {
                 search(1);
             }
         });
-        $(document).on('keypress', 'input', function () {
-            try {
-                return blockSpecialChar(event);
-            } catch (e) {
-                alert('special characters' + e.message);
-            }
-        });
-
-        $(document).on('dblclick', 'tbody tr', function () {
-            try {
-                var company_cd = $(this).attr('company_cd');
-                window.location.href = '/master/m001?company_cd='+company_cd;
-            } catch (e) {
-                alert('special characters' + e.message);
-            }
-        });
-
     } catch (e) {
         alert('initialize: ' + e.message);
     }
 }
-/**
- * search
- *
- * @author      : ANS-ASIA QUYND - 2017/12/08 - create
- */
 //search data to fill into the table
 function search(page){
     try{
@@ -129,8 +88,10 @@ function search(page){
             success: function (res) {
                 $("#result").empty();
                 $("#result").append(res);
+                if($('#table-area tbody tr.no-data').length >0){
+                    $('#emp_nm').focus();
+                }
                 tabIndex();
-                //$("#company_nm").focus();
             },
             // Ajax error
             error: function (res) {
@@ -142,26 +103,17 @@ function search(page){
     }
     
 }
-/**
- * tabIndex
- *
- * @author      : ANS-ASIA QUYND - 2017/12/08 - create
- */
+
 //set tabindex for control
 function tabIndex(){
     $(".tabId ul").attr("tabindex","4");
     $(".tb-tabId thead tr th:first").attr("tabindex","5");
-    // $("#btn-back").attr("tabindex","7");
-    // $("#btn-search").attr("tabindex","8");
 }
-/**
- * transfer
- *
- * @author      : ANS-ASIA QUYND - 2017/12/08  - create
- */
+
 //transfer data from popup to popup control
 function transfer(element) {
     try {
+        debugger;
         var row_obj = (typeof element.attr('row_data')!='undefined')?JSON.parse(element.attr('row_data')):{};
         var parents = {};
         //locate calling source
@@ -170,10 +122,9 @@ function transfer(element) {
         } else {
             parents = parent.$('.refer-search[tabindex=' + btnid + ']').parents('.popup');
         }
-
         for(var cl in row_obj){
             if($.inArray(parents.find('.' + cl+":visible").prop("tagName"), ["INPUT", "SELECT"]) != -1) {
-                parents.find('.' + cl).val(row_obj[cl]).trigger('lm001change');
+                parents.find('.' + cl).val(row_obj[cl]).trigger('lm003change');
             } else {
                 parents.find('.' + cl).text(row_obj[cl]);
                 parents.find('.' + cl).attr('title',row_obj[cl]);

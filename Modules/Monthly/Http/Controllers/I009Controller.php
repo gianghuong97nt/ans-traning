@@ -1,11 +1,10 @@
 <?php
-
 namespace Modules\Monthly\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use App\Helpers\Dao;
+use Session;
 
 class I009Controller extends Controller
 {
@@ -13,8 +12,10 @@ class I009Controller extends Controller
 
     public function index()
     {
-        return view('monthly::i009.index', initSession($this->screen))
-            ->with('data_session', initSession($this->screen, true));
+        return view('monthly::i009.index',initSession($this->screen))
+            ->with('emp_cd','')
+            ->with('emp_nm','')
+            ->with('data_session',initSession($this->screen,true));
     }
 
     public function postSearch(Request $request)
@@ -24,7 +25,10 @@ class I009Controller extends Controller
             $param['company_cd_login'] = $request->session()->get('company_cd');
             $data  = Dao::call_stored_procedure('SPC_I009_FND1', $param);
             return view('monthly::i009.search')
-                ->with('data', $data);
+                ->with('data', $data)
+                ->with('searchFlag',1)
+                ->with('emp_cd','')
+                ->with('emp_nm','');
         }
     }
 
@@ -54,7 +58,6 @@ class I009Controller extends Controller
                         'data' => '',
                     );
                 }
-
             }
         } catch (\Exception $e) {
             $result = array(
@@ -67,7 +70,10 @@ class I009Controller extends Controller
 
     public function refer(Request $request){
         $param = $request->all();
-        $data = $data  = Dao::call_stored_procedure('SPC_I009_INQ1', $param);
+        $param['company_cd'] = $request->session()->get('company_cd');
+        $data = Dao::call_stored_procedure('SPC_I009_INQ1', $param);
+//        var_dump($param);
+//        die();
         if ($data[0][0]['emp_cd'] == 'no result') {
             $result = array(
                 'status' => 'no result',

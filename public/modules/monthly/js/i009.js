@@ -1,11 +1,3 @@
-/**
- * TOSMAC PROJECT
- * user master-m001l
- *
- * @copyright       :   ANS
- * @author          :   chinhnb - 2017/12/19 - create
- * @author          :
- */
 var _obj = {
     'project_nm'		    : {'type': 'text', 'attr': {'maxlength': '100'	 , 'class': '' , 'tabindex': '1'}}
     , 'client_cd'		    : {'type': 'text', 'attr': {'maxlength': '8'	 , 'class': 'numeric' , 'tabindex': '2'}}
@@ -23,14 +15,6 @@ $(document).ready(function () {
         alert('ready: ' + e.message);
     }
 });
-
-/**
- * function initialize
- *
- * @author  :   chinhnb - 2017/12/18 - create
- * @author  :
- *
- */
 function initialize() {
     try {
         initItem(_obj);
@@ -40,17 +24,9 @@ function initialize() {
         alert('initialize: ' + e.message);
     }
 }
-
-/**
- * function initTrigger
- *
- * @author  :   chinhnb - 2017/12/18 - create
- * @author  :
- *
- */
 function initTrigger() {
     try {
-        //auto search
+        // auto search
         if ($('#searchFlag').val() == '1') {
             search();
         }
@@ -58,32 +34,25 @@ function initTrigger() {
         alert('iniTrigger' + e.message);
     }
 }
-
-/**
- * function initEvents
- *
- * @author  :   chinhnb - 2017/12/18 - create
- * @author  :
- *
- */
-
 function initEvents() {
     try {
-
         //btn search
         $(document).on('click', '#btn-search', function() {
             try {
+                $("#searchFlag").val(1);
                 search();
+
             } catch (e) {
                 alert('Eror #btn-search ' + e.message);
             }
         });
-
         //btn search
         $(document).on('click', '#btn-save', function() {
             try {
                 if($('#table-area tbody tr.no-data').length >0){
-                    jError('Do not save. Not record');
+                    // jError('処理が失敗しました。');
+                    jMessage(17, function(r){
+                    });
 
                 }else{
                     jMessage(1, function(r){
@@ -99,8 +68,6 @@ function initEvents() {
                 alert('Eror #btn-save ' + e.message);
             }
         });
-
-
         $(document).on('keypress', '.charac_special', function () {
             try {
                 return blockSpecialChar(event);
@@ -108,53 +75,23 @@ function initEvents() {
                 alert('special characters' + e.message);
             }
         });
-
-
-        // $(document).on('change', '.emp_cd', function() {
-        //     try {
-        //         $(this).closest('td').addClass('changeEmp_cd');
-        //         $(this).closest('tr').find('company_cd');
-        //         var emp_cd = $(this).val();
-        //         refer(emp_cd);
-        //     } catch (e) {
-        //         alert('Eror #btn-save ' + e.message);
-        //     }
-        // });
-
-        // $(document).on('change', '.emp_cd', function() {
-        //     try {
-        //         var emp = $(this).parents('.emp_cd');
-        //         $(this).closest('.input-group').addClass('test-td');
-        //         refer(emp);
-        //     } catch (e) {
-        //         alert('Eror #btn-save ' + e.message);
-        //     }
-        // });
-
-
     } catch (e) {
         alert('initialize: ' + e.message);
     }
 }
-
-function refer(element) {
+function referEmp(emp_cd) {
     try{
         var data    = {};
-        data.emp_cd = element.find('.emp_cd_edit').val();
-
+        data.emp_cd = emp_cd;
         $.ajax({
             type: 'POST',
             url: '/monthly/i009/refer',
             dataType: 'json',
-            loading: true,
             data: data,
             success: function (res) {
-                // console.log(res);
-                // var abc = element.find('.test-td');
-                // alert(abc.attr('abc'));
-                // abc.find('.emp_cd_edit').val(res['emp_cd']);
-                element.find('.emp_cd_edit').val(1);
-                element.find('.emp_nm_edit').text(res['emp_nm']);
+                $('.changeEmp_cd').find('.emp_nm').text(res['emp_nm']);
+                $('.changeEmp_cd').find('.emp_cd').val(res['emp_cd']);
+                $('.changeEmp_cd').removeClass();
             },
             // Ajax error
             error: function (res) {
@@ -164,7 +101,6 @@ function refer(element) {
         alert('refer employee_cd ' + e.message);
     }
 }
-
 function search(){
     try{
         var data = getData(_obj);
@@ -177,7 +113,11 @@ function search(){
             success: function (res) {
                 $("#result").empty();
                 $("#result").append(res);
-                //
+                if($('#table-area tbody tr.no-data').length >0){
+                    $('#project_nm').focus();
+                }
+                $('table .emp_cd:first').focus();
+                _setTabIndex();
                 jTableFixedHeader();
             },
             // Ajax error
@@ -187,14 +127,12 @@ function search(){
     }catch (e) {
         alert('#btn-search ' + e.message);
     }
-
 }
 
 function getAllDataTable(target_table){
     var data=[];
     target_table.find('tbody tr:visible').each(function(i){
         var element={};
-        // element['company_cd']   =  $(this).attr('company_cd');
         element['project_no']   =  $(this).find('.project_no').attr('project_no');
         element['emp_cd']  =  $(this).find('.emp_cd').val();
         data[i]=element;
@@ -206,8 +144,6 @@ function save(){
     try{
         var data = {};
         data = getAllDataTable($('#table-area'));
-        // console.log(data);
-        // debugger;
         $.ajax({
             type: 'POST',
             url: '/monthly/i009/save',
@@ -220,7 +156,6 @@ function save(){
                     case '200':
                         jMessage(2,function(){
                             search();
-                            // window.location.reload();
                         });
                         break;
                     // Data Validate
@@ -244,9 +179,7 @@ function save(){
     }catch (e) {
         alert('#btn-search ' + e.message);
     }
-
 }
-
 
 function validate() {
     var _errors = 0;
@@ -258,7 +191,6 @@ function validate() {
 
     return true;
 }
-
 // Fixed header
 function jTableFixedHeader(){
 
@@ -427,5 +359,4 @@ function jTableFixedHeader(){
     }
 
 }
-
 

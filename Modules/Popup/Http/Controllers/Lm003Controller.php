@@ -1,5 +1,4 @@
 <?php
-
 namespace Modules\Popup\Http\Controllers;
 
 use App\Helpers\Dao;
@@ -9,7 +8,7 @@ use Illuminate\Support\Facades\Input;
 
 class Lm003Controller extends Controller
 {
-    protected $detailScreen = 'I009';
+    protected $detailScreen = 'LM003';
     /**
      * display search
      *
@@ -28,25 +27,26 @@ class Lm003Controller extends Controller
         $data['data']['istable']     = isset($aParams['istable']) ? $aParams['istable'] : 0;
         $data['data']['puredata']    = isset($aParams['puredata']) ? $aParams['puredata'] : 0;
         $data['data']['multi']       = $request->multi;
-        $data['data']['searchFlag'] = 1;
+        $data['searchFlag']          = 1;
         $data_screen                 = initSession($this->detailScreen, false);
         $data_screen['data_session'] = initSession($this->detailScreen, true);
-        //var_dump($data);die;
 
-        return view('popup::search.lm003', $data, $data_screen);
+        $emp_divs    = Dao::call_stored_procedure('SPC_LM003_INQ1');
+        return view('popup::search.lm003', $data, $data_screen)
+            ->with('emp_divs',$emp_divs);
     }
     //search data into popup
     public function postSearch(Request $request)
     {
         if($request->ajax()) {
         $param = $request->all();
+        $param['company_cd_login'] = $request->session()->get('company_cd');
         $data  = Dao::call_stored_procedure('SPC_LM003_FND2', $param);
-//        var_dump($data);
-//        die();
+
         return view('popup::search.searchlm003')
             ->with('data', $data)
+            ->with('searchFlag', 1)
             ->with('paging', $data[1][0]);
         }
     }
-
 }

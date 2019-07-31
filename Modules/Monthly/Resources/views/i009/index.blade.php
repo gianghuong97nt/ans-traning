@@ -21,10 +21,8 @@
     {!! public_url('modules/monthly/js/i009.js')!!}
 @endsection
 
-
 @section('content')
     <div class="row form-horizontal">
-        <!-- Search field -->
         <div class="panel panel-flat">
             <div class="panel-heading">
                 <h6 class="panel-title text-bold">基本情報</h6>
@@ -64,20 +62,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group" >
-                        <label class="col-md-2 col-sm-2 col-xs-12 control-label">担当者</label>
-                        <div class="col-md-3 col-sm-3 col-xs-12 popup-from-to">
-                            <div class="popup" >
-                                <div class="input-group">
-                                    <input type="text" class="form-control left-radius right-radius charac_special" id="emp_cd" style="width: 70px">
-                                    <span class="input-group-btn" style="margin-left: -1px!important;">
-								        <button type="button" class="btn btn-primary btn-icon btn-search"><i class="icon-search4"></i></button>
-							        </span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <label class="col-md-2 col-sm-2 col-xs-12 control-label ">担当者</label>
+                        @include('popup.search_empcd', array('data'=>'lm003','col'=>'col-md-4 col-sm-5 col-xs-12','id'=>'emp_cd',
+                        'name_id'=>'display_emp_nm'))
                     </div>
-
                     <div class="form-group">
                         <label class="col-md-2 col-sm-2 col-xs-12 control-label">売上年月</label>
                         <div class="col-md-4 col-sm-6 col-xs-12 date-from-to">

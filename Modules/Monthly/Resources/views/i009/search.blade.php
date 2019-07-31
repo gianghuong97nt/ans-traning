@@ -19,38 +19,33 @@
                 </tr>
                 </thead>
                 <tbody>
-                @if(isset($data[0][0]['project_no'])&&$data[0][0]['company_cd'] != '')
+                @if(isset($data[0][0]['project_no'])&&$data[0][0]['project_no'] != '')
                     @foreach($data[0] as $row)
                         <tr company_cd = {!! $row['company_cd'] !!}>
                             <td class="text-right project_no" project_no ={{$row['project_no']}} >
                                 {!!isset($row['project_no'])?$row['project_no']:''  !!}</td>
                             <td class="text-left " >{!!isset($row['project_nm'])?$row['project_nm']:''   !!}</td>
                             <td class="text-overfollow">{!! isset($row['client_nm'])?$row['client_nm']:''  !!}</td>
-                            <td class="text-overfollow" >{!!isset($row['sales_recorded_date_to'])?$row['sales_recorded_date_to']:''  !!}</td>
+                            <td class="text-overfollow" >{!!isset($row['sales_recorded_date'])?$row['sales_recorded_date']:''  !!}</td>
                             <td class="text-right" >{!!isset($row['emp_cd'])?$row['emp_cd']:''  !!}</td>
                             <td class="text-overfollow" >{!!isset($row['emp_nm'])?$row['emp_nm']:'' !!}</td>
-                            <td class=" form-group">
-                                <div class="input-group" style="display: inline-block; width: 100px" >
-                                    <input type="text" class="form-control left-radius right-radius text-right emp_cd"
-                                           value="{!!isset($row['emp_cd'])?$row['emp_cd']:'' !!}" style="width: 68px">
-                                    <span class="input-group-btn" style="margin-left: -1px!important;">
-                                        <button type="button" class="btn btn-primary btn-icon btn-search"><i class="icon-search4"></i></button>
-                                    </span>
-                                </div>
-
+                            <td style="width: 140px">
+                                @include('popup.search_empcd', array('data'=>'lm003','key'=>$row['emp_cd'],'istable' => '1', 'col'=>'col-md-4 col-sm-5 col-xs-12',
+                                'value'=>$row['emp_nm'],'name_id'=>'display_emp_nm'))
                             </td>
-                            <td class="form-group">
-                                <span class=" emp_nm text-overfollow" style="display:inline-block; width: 430px">
-                                    {!!isset($row['emp_nm'])?$row['emp_nm']:'' !!}
-                                </span>
-
-                            </td>
+                            <td class="text-left text-overfollow w-160px emp_nm" title="{!! $row['emp_nm'] !!}">{!! htmlentities($row['emp_nm']) !!}</td>
                         </tr>
                     @endforeach
                 @else
-                    <tr class="no-data">
-                        <td colspan="9" class="text-center">{!! trans('translates.messages.11') !!}</td>
-                    </tr>
+                    @if($searchFlag == 0)
+                        <tr class="no-data">
+                            <td colspan="9" class="text-center">{!! trans('translates.messages.17') !!}</td>
+                        </tr>
+                    @else
+                        <tr class="no-data">
+                            <td colspan="9" class="text-center">{!! trans('translates.messages.11') !!}</td>
+                        </tr>
+                    @endif
                 @endif
                 </tbody>
             </table>

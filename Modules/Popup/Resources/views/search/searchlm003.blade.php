@@ -19,32 +19,34 @@
             <table class="table table-hover table-bordered table-xxs" id="table-area">
                 <thead>
                 <tr class="col-table-header text-center">
-                    <th class="text-center" width="100px">会社CD</th>
-                    <th class="text-center">担当者</th>
-                    <th class="text-center" width="25%">会社略称</th>
-                    <th class="text-center" width="22%">備考</th>
-                    <th class="text-center" width="22%">備考</th>
+                    <th class="text-center" width="100px">会社名</th>
+                    <th class="text-center">社員CD</th>
+                    <th class="text-center" width="25%">社員名</th>
+                    <th class="text-center" width="22%">社員区分</th>
+                    <th class="text-center" width="22%">部課名</th>
                 </tr>
                 </thead>
                 <tbody>
-                @if(isset($data[0][0]['company_cd'])&&$data[0][0]['emp_cd'] != '')
+                @if(isset($data[0][0]['company_nm'])&&$data[0][0]['company_nm'] != '')
                     @foreach($data[0] as $row)
-                        <tr row_data="{{json_encode($row)}}" company_cd = {!! $row['company_cd'] !!}>
-                            <td class="text-center text-overfollow">{!! $row['company_cd'] !!}</td>
+                        <tr row_data="{{json_encode($row)}}" emp_cd = {!! $row['emp_cd'] !!}>
+                            <td class="text-center text-overfollow">{!! $row['company_nm'] !!}</td>
                             <td class="text-center" title="{!! $row['emp_cd'] !!}">{!! $row['emp_cd'] !!}</td>
                             <td class="text-overfollow" title="{!! $row['emp_nm']!!}">{!! $row['emp_nm'] !!}</td>
-                            <td class="text-overfollow" title="{!! $row['emp_kn_nm'] !!}">{!! $row['emp_kn_nm'] !!}</td>
-                            <td class="text-center" title="{!! $row['emp_div'] !!}">{!! $row['emp_div'] !!}</td>
+                            <td class="text-overfollow" title="{!! $row['name'] !!}">{!! $row['name'] !!}</td>
+                            <td class="text-center" title="{!! $row['section_nm'] !!}">{!! $row['section_nm'] !!}</td>
                         </tr>
                     @endforeach
                 @else
-                    <tr class="disable-selection">
-                        @if(isset($data[0][0]['company_cd'])&&$data[0][0]['emp_cd'] != '')
-                            <td colspan="4" class="text-center">{!! trans('translates.messages.11') !!}</td>
-                        @else
-                            <td colspan="4" class="text-center">{!! trans('translates.messages.17') !!}</td>
-                        @endif
-                    </tr>
+                    @if($searchFlag == 0)
+                        <tr class="no-data disable-selection">
+                            <td colspan="5" class="text-center">{!! trans('translates.messages.17') !!}</td>
+                        </tr>
+                    @else
+                        <tr class="no-data disable-selection">
+                            <td colspan="5" class="text-center">{!! trans('translates.messages.11') !!}</td>
+                        </tr>
+                    @endif
                 @endif
                 </tbody>
             </table>

@@ -1041,39 +1041,41 @@ function initOneTimeControls() {
         var _paras = {};
         var parent = $(this).parents('.popup');
         var temp_elem = $(this);
-        var _key = parent.data('search').substring(1, parent.data('search').length).toUpperCase();
+        var _key = parent.data('search');
         //var nm = parent.data('nm');
         var istable = parent.data('istable');
+        var refer_item = parent.data('refer_item');
         _paras.key = _key;
         _paras.value = $(this).val();
         _paras.option1 = parent.data('option1');
         _paras.option2 = parent.data('option2');
         _paras.option3 = parent.data('option3');
         _paras.option4 = parent.data('option4');
-        if ($('#company_cd').length) {
-            _paras.company_cd = $('#company_cd').val() == '' ? 0 : $('#company_cd').val();
+        var nm = parent.data('nm');
+        var id = parent.data('id');
+        if (istable == '1') {
+            parent = $(this).parents('tr');
         }
         $.post('/common/refername', _paras, function (res) {
             if (istable) {
-                if (res[_key] == '') {
+                if (res[id] == '') {
                     temp_elem.val('');
                 }
-
-                $.each(res, function (key) {
-                    parent.parents('tr').find('.' + key).text(res[key]);
-                    parent.parents('tr').find('.' + key).prop('title', res[key]);
-                    //console.log(key + ':' + res[key]);
-                });
+                parent.find('.' + nm).text(res[nm]);
+                parent.find('.' + nm).val(res[nm]);
+                parent.find('.' + nm).prop('title', res[nm]);
             } else {
-                if (res['value_member'] == '') {
+                if (res[id] == '') {
                     temp_elem.val('');
-                    temp_elem.focus();
                 }
-                parent.find('.m-w-popup-label').text(res['display_member']);
-                parent.find('.m-w-popup-label').prop('title', res['display_member']);
+                parent.find('.' + nm).text(res[nm]);
+                parent.find('.' + nm).val(res[nm]);
+                parent.find('.' + nm).prop('title', res[nm]);
             }
+            // trigger custom change
+            temp_elem.trigger(_key + 'change');
+            parent.find('.' + nm).trigger(_key + 'change');
         });
-
     });
 
 }

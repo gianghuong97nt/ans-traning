@@ -46,11 +46,10 @@ $(document).ready(function () {
 function initialize() {
     try {
         initItem(_obj);
-        // Nếu company_cd trống thì ẩn btn delete
         if ($('#company_cd').val()=='') {
             $('#btn-delete').addClass('disable');
         }
-        // Nếu company_cd khác rỗng thì thuộc tính redonly mang giá trị là true focus vào company_nm
+
         if ($('#company_cd').val()!='') {
             $('#company_cd').trigger('change');
             $('#company_cd').prop('readonly',true);
@@ -59,10 +58,12 @@ function initialize() {
         else{
             $('#company_cd').focus();
         }
+
+        //
         //auto refer katakana
-        // $.fn.autoKana('#company_nm', '#company_kn_nm', {
-        //     katakana: true  //true：カタカナ、false：ひらがな（デフォルト）
-        // });
+        $.fn.autoKana('#company_nm', '#company_kn_nm', {
+            katakana: true  //true：カタカナ、false：ひらがな（デフォルト）
+        });
     } catch (e) {
         alert('initialize: ' + e.message);
     }
@@ -100,6 +101,7 @@ function initEvents() {
         });
         //save button
         $(document).on('click', '#btn-save', function() {
+            // debugger;
             try {
                 jMessage(1, function(r){
                     if(r) {
@@ -113,14 +115,14 @@ function initEvents() {
             }
         });
 
-        $(document).on('blur', '#company_cd', function() {
+        $(document).on('change', '#company_cd', function(e) {
             try {
+                e.preventDefault();
                 referCompany();
             } catch (e) {
-                alert('#btn-save ' + e.message);
+                alert('#company_cd ' + e.message);
             }
         });
-
 
     } catch (e) {
         alert('initEvents: ' + e.message);
@@ -131,12 +133,12 @@ function referCompany() {
     try {
         var data = {};
         data.company_cd = $('#company_cd').val();
-        // console.log(data.company_cd);
         $.ajax({
             type: 'POST',
             url: '/master/m001/refer',
             dataType: 'json',
-            loading: true,
+            // loading: true,
+
             data: data,
             success: function (res) {
                 if (res.data[0][0]['company_cd'] != '') {
@@ -153,9 +155,6 @@ function referCompany() {
                 }
                 //
                 $('#mode').val(res.mode);
-                // if (callback != undefined) {
-                //     callback();
-                // }
             }
         });
     } catch (e) {
@@ -177,21 +176,17 @@ function save(){
             url: '/master/m001/save',
             dataType: 'json',
             loading: true,
+
             data: data,
             success: function (res) {
-                console.log(res['data']);
-                debugger;
+                // console.log(res['data']);
+                // debugger;
                 switch (res['status']) {
                     // Success
                     case '200':
                         jMessage(2,function(){
                             var company_cd = res['data'][0]['company_cd'];
-                            // alert(res['data'][0]['company_cd']);
                             window.location.href = '/master/m001?company_cd='+company_cd;
-                            // $('#company_nm').focus();
-                            // $('#company_cd').attr('readonly', true);
-                            // $('#registration_footer').html(res.createUpdate);
-                            // $('#btn-delete').removeClass('disable');
                         });
                         break;
                     // Data Validate
@@ -199,7 +194,6 @@ function save(){
                         if (typeof res['data'] != 'undefined') {
                             _showError(res['data']);
                         }
-
                         break;
                     // SQL + PHP Exception
                     case '202':
@@ -239,7 +233,7 @@ function del() {
                 switch (res['status']) {
                     case '200':
                         jMessage(4,function(){
-                            location.href = "/master/m001";
+                            window.location.href = "/master/m001";
                         });
                         break;
                     case '201':
@@ -272,8 +266,6 @@ function del() {
  * @author        :
  */
 function back() {
-
-    // set điều kiện để search còn không thì ở lại trang
     if (_is_from_search == '1') {
         _back_data['search_flag'] = '1';
         _back_data['message_search_condition'] = getHtmlCondition('#back-search-condition');
