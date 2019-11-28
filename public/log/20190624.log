@@ -1,0 +1,125 @@
+2019-06-24 13:14:26 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 13:14:26 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 13:14:26 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 13:14:27 EXEC SPC_M003L_FND1 '1','','1','2','50','1';
+2019-06-24 13:14:46 EXEC SPC_M003L_FND1 '1','Nguyễn M','1','2','50','1';
+2019-06-24 13:16:50 EXEC SPC_M003L_FND1 '1','','1','2','50','1';
+2019-06-24 13:39:45 EXEC SPC_M003L_INQ1
+2019-06-24 13:39:48 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 13:39:48 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 13:39:48 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 13:39:49 EXEC SPC_M003L_FND1 '1','','1','2','50','1';
+2019-06-24 13:39:50 EXEC SPC_M003L_FND1 '1','','1','2','50','1';
+2019-06-24 13:39:56 EXEC SPC_M003L_INQ1
+2019-06-24 13:39:58 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 13:39:58 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 13:39:58 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 13:40:00 EXEC SPC_M003L_FND1 '1','','1','2','50','1';
+2019-06-24 13:40:20 EXEC SPC_M003L_INQ1
+2019-06-24 13:40:22 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 13:40:22 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 13:40:22 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 13:40:32 EXEC SPC_M003L_INQ1
+2019-06-24 13:40:35 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 13:40:35 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 13:40:35 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 13:40:36 EXEC SPC_M003L_FND1 '1','','1','2','50','1';
+2019-06-24 13:48:47 EXEC SPC_M003L_INQ1
+2019-06-24 13:48:52 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 13:48:52 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 13:48:52 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 13:48:53 EXEC SPC_M003L_FND1 '1','','1','2','50','1';
+2019-06-24 13:55:15 EXEC SPC_M003L_INQ1
+2019-06-24 13:55:20 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 13:55:20 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 13:55:20 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 13:55:21 EXEC SPC_M003L_FND1 '1','','1','2','50','1';
+2019-06-24 13:56:46 EXEC SPC_M003L_INQ1
+2019-06-24 13:57:05 EXEC SPC_M003L_INQ1
+2019-06-24 15:09:44 EXEC SPC_M003L_FND1 '1','Nguyễn Minh Nghĩa','1','','50','1';
+2019-06-24 15:09:45 EXEC SPC_M003L_FND1 '1','Nguyễn Minh Nghĩa','1','','50','1';
+2019-06-24 15:09:47 EXEC SPC_M003L_FND1 '1','Nguyễn Minh Nghĩa','1','','50','1';
+2019-06-24 15:09:48 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 15:09:48 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:09:49 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 15:09:50 EXEC SPC_M003L_INQ1
+2019-06-24 15:09:52 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 15:09:53 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:09:53 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 15:09:54 EXEC SPC_M003L_FND1 '1','','1','2','50','1';
+2019-06-24 15:09:58 EXEC SPC_COMMON_REFER 'M001','1','','','','','1';
+2019-06-24 15:09:58 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:09:58 EXEC SPC_M003L_INQ02 '1';
+2019-06-24 15:10:03 EXEC SPC_M003L_INQ02 '1';
+2019-06-24 15:10:03 EXEC SPC_COMMON_REFER 'M001','1','','','','','1';
+2019-06-24 15:10:03 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:10:05 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 15:10:05 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 15:10:05 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:10:11 EXEC SPC_M003L_INQ02 '3';
+2019-06-24 15:10:11 EXEC SPC_COMMON_REFER 'M001','3','','','','','3';
+2019-06-24 15:10:11 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:10:25 EXEC SPC_COMMON_REFER 'M001','5','','','','','5';
+2019-06-24 15:10:25 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:10:25 EXEC SPC_M003L_INQ02 '5';
+2019-06-24 15:10:28 EXEC SPC_COMMON_REFER 'M001','5','','','','','5';
+2019-06-24 15:10:28 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:10:28 EXEC SPC_M003L_INQ02 '5';
+2019-06-24 15:10:31 EXEC SPC_COMMON_REFER 'M001','4','','','','','4';
+2019-06-24 15:10:31 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:10:31 EXEC SPC_M003L_INQ02 '4';
+2019-06-24 15:10:34 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 15:10:34 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:10:34 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 15:10:37 EXEC SPC_M003L_FND1 '1','','1','2','50','1';
+2019-06-24 15:10:42 EXEC SPC_COMMON_REFER 'M001','3','','','','','3';
+2019-06-24 15:10:42 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:10:42 EXEC SPC_M003L_INQ02 '3';
+2019-06-24 15:10:58 EXEC SPC_COM_M101_INQ1 '26','0';
+2019-06-24 15:11:01 EXEC SPC_S001_INQ1 '';
+2019-06-24 15:11:02 EXEC SPC_COM_M101_INQ1 '26','0';
+2019-06-24 15:11:02 EXEC SPC_S001_INQ1 'ans713';
+2019-06-24 15:11:08 EXEC SPC_M003L_INQ1
+2019-06-24 15:11:12 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 15:11:12 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:11:12 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 15:11:13 EXEC SPC_M003L_FND1 '1','','1','2','50','1';
+2019-06-24 15:11:18 EXEC SPC_M003L_INQ02 '1';
+2019-06-24 15:11:18 EXEC SPC_COMMON_REFER 'M001','1','','','','','1';
+2019-06-24 15:11:18 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:11:29 EXEC SPC_M003L_INQ02 '3';
+2019-06-24 15:11:29 EXEC SPC_COMMON_REFER 'M001','3','','','','','3';
+2019-06-24 15:11:29 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:11:37 EXEC SPC_M003L_INQ1
+2019-06-24 15:11:39 EXEC SPC_COMMON_REFER 'M001','1','','','','','1';
+2019-06-24 15:11:39 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:11:39 EXEC SPC_M003L_INQ02 '1';
+2019-06-24 15:11:42 EXEC SPC_COMMON_REFER 'M001','3','','','','','3';
+2019-06-24 15:11:42 EXEC SPC_M003L_INQ02 '3';
+2019-06-24 15:11:42 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:11:44 EXEC SPC_M003L_INQ02 '5';
+2019-06-24 15:11:44 EXEC SPC_COMMON_REFER 'M001','5','','','','','5';
+2019-06-24 15:11:44 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:11:49 EXEC SPC_COMMON_REFER 'M001','6','','','','','6';
+2019-06-24 15:11:49 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:11:49 EXEC SPC_M003L_INQ02 '6';
+2019-06-24 15:11:55 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 15:11:55 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 15:11:55 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:11:56 EXEC SPC_M003L_FND1 '1','','1','2','50','1';
+2019-06-24 15:11:59 EXEC SPC_COMMON_REFER 'M001','4','','','','','4';
+2019-06-24 15:11:59 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:11:59 EXEC SPC_M003L_INQ02 '4';
+2019-06-24 15:12:04 EXEC SPC_M003L_INQ1
+2019-06-24 15:20:26 EXEC SPC_M003L_INQ1
+2019-06-24 15:20:41 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 15:20:41 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:20:41 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 15:20:42 EXEC SPC_M003L_FND1 '1','','1','2','50','1';
+2019-06-24 15:20:47 EXEC SPC_COMMON_REFER 'M001','1','','','','','1';
+2019-06-24 15:20:47 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:20:47 EXEC SPC_M003L_INQ02 '1';
+2019-06-24 15:20:50 EXEC SPC_COMMON_REFER 'M001','2','','','','','2';
+2019-06-24 15:20:50 SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function SPC_COMMON_REFER has too many arguments specified.
+2019-06-24 15:20:50 EXEC SPC_M003L_INQ02 '2';
+2019-06-24 15:20:51 EXEC SPC_M003L_FND1 '1','','1','2','50','1';

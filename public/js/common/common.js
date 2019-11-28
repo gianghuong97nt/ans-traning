@@ -971,7 +971,7 @@ function initOneTimeControls() {
                 input.focus();
             }, '40%', '40%');
         }
-        if (parent.data('search') == 'lm002') {
+        if (parent.data('search') == 'lm002' || parent.data('search') == 'l001') {
             //get local id
             if ($('#company_cd').length) {
                 data.company_cd = $('#company_cd').val() == '' ? 0 : $('#company_cd').val();
@@ -979,9 +979,11 @@ function initOneTimeControls() {
             showPopup('/popup/search/' + data.search + '?' + _setGetPrams(data), function () {
                 input.focus();
             });
+
         } else {
             showPopup('/popup/search/' + data.search + '?' + _setGetPrams(data), function () {
-                parent.find('input:first').focus();
+                // parent.find('input:first').focus(); vietdt edit 2019/0
+                 parent.find('input:enabled:visible:not([readonly]):first').focus();
             });
         }
     });
@@ -1074,8 +1076,75 @@ function initOneTimeControls() {
             }
             // trigger custom change
             temp_elem.trigger(_key + 'change');
+            console.log(_key + 'change');
             parent.find('.' + nm).trigger(_key + 'change');
         });
+    });
+    $(document).on('change', '.refer-search-1', function () {
+
+        var parent = $(this).parents('.popup');
+        var nm = parent.data('nm');
+        var id = parent.data('id');
+        var temp_elem = $(this);
+        var _key = parent.data('search');
+        var istable = parent.data('istable');
+        if (parent.find('.refer-search-1').eq(0).val() != '' && parent.find('.refer-search-1').eq(1).val() != '') {
+
+            var _paras = {};
+            //var nm = parent.data('nm');
+            var refer_item = parent.data('refer_item');
+             _paras.key = _key;
+            //* KienNT modified 2018/02/01 CHÚ Ý : vì có 2 item key chính nên các option phụ sẽ bị đẩy lùi xuống 1 vị trí
+            _paras.value = parent.find('.refer-search-1').eq(0).val();
+            _paras.option1 = parent.find('.refer-search-1').eq(1).val();
+            _paras.option2 = parent.data('option1');
+            _paras.option3 = parent.data('option2');
+            _paras.option4 = parent.data('option3');
+            // console.log(_paras);
+            if (istable == '1') {
+                parent = $(this).parents('tr');
+            }
+
+            $.post('/common/refername', _paras, function (res) {
+
+                if (istable) {
+                    if (res[id] == '') {
+                        temp_elem.val('');
+                    }
+                    //console.log('aaaa');
+                    console.log(parent.length);
+                    parent.find('.' + nm).text(res[nm]);
+                    parent.find('.' + nm).val(res[nm]);
+                    parent.find('.' + nm).prop('title', res[nm]);
+                } else {
+                    if (res[id] == '') {
+                        temp_elem.val('');
+                    }
+                    if ($.inArray(parent.find('.' + nm + ":visible").prop("tagName"), ["INPUT", "SELECT"]) != -1) {
+                        parent.find('.' + nm).val(res[nm]);
+                    } else {
+                        parent.find('.' + nm).text(res[nm]);
+                        parent.find('.' + nm).prop('title', res[nm]);
+                    }
+                }
+                // trigger custom change
+                temp_elem.trigger(_key + 'change');
+                parent.find('.' + nm).trigger(_key + 'change');
+            });
+        } else {
+            if (istable == '1') {
+                parent = $(this).parents('tr');
+            }
+            if ($.inArray(parent.find('.' + nm + ":visible").prop("tagName"), ["INPUT", "SELECT"]) != -1) {
+                parent.find('.' + nm).val('');
+            } else {
+                parent.find('.' + nm).text('');
+                parent.find('.' + nm).prop('title', '');
+            }
+            // trigger custom change
+            temp_elem.trigger(_key + 'change');
+            parent.find('.' + nm).trigger(_key + 'change');
+        }
     });
 
 }

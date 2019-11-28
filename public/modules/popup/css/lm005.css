@@ -1,0 +1,22 @@
+table tbody tr td.text-overfollow {
+    max-width: 150px;
+}
+.table tbody tr td,
+.table thead tr th {
+    white-space: nowrap;
+}
+.table thead tr th:first-child {
+    width: 40px;
+}
+#emp_nm {
+    width: 250px;
+}
+@media screen and (max-width:768px) {
+    .search-condition{
+        padding: 0px 25px 5px 15px;
+        position: relative;
+    }
+    .popup-form {
+        padding-top: 25px !important;
+    }
+}

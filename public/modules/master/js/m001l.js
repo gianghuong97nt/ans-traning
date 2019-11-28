@@ -1,11 +1,3 @@
-/**
- * TOSMAC PROJECT
- * user master-m001l
- *
- * @copyright       :   ANS
- * @author          :   chinhnb - 2017/12/19 - create
- * @author          :
- */
 var _obj = {
       'company_nm'		    : {'type': 'text', 'attr': {'maxlength': '50'	 , 'class': '' , 'tabindex': '1'}}
     , 'company_adr'		    : {'type': 'text', 'attr': {'maxlength': '100'	 , 'class': '' , 'tabindex': '2'}}
@@ -21,13 +13,6 @@ $(document).ready(function () {
     }
 });
 
-/**
- * function initialize
- *
- * @author  :   chinhnb - 2017/12/18 - create
- * @author  :
- *
- */
 function initialize() {
     try {
         initItem(_obj);
@@ -38,13 +23,6 @@ function initialize() {
     }
 }
 
-/**
- * function initTrigger
- *
- * @author  :   chinhnb - 2017/12/18 - create
- * @author  :
- *
- */
 function initTrigger() {
     try {
         //auto search
@@ -57,13 +35,6 @@ function initTrigger() {
     }
 }
 
-/**
- * function initEvents
- *
- * @author  :   chinhnb - 2017/12/18 - create
- * @author  :
- *
- */
 function initEvents() {
     try {
         //btn back --> quay trở lại trang ban đầu
@@ -103,25 +74,15 @@ function initEvents() {
         $(document).on('click', '#btn-edit', function () {
             try {
                 var company_cd = $(this).attr('company_cd');
-                window.location.href = '/master/m001?company_cd='+company_cd;
+                fnc_refer_link(company_cd);
             } catch (e) {
-                alert('.pagination li' + e.message);
+                alert('btn-edit' + e.message);
             }
         });
-
-        $(document).on('keypress', '#company_tel', function () {
-            try {
-                return blockSpecialChar(event);
-            } catch (e) {
-                alert('special characters' + e.message);
-            }
-        });
-
     } catch (e) {
         alert('initialize: ' + e.message);
     }
 }
-
 
 function search(_page){
     try{
@@ -149,10 +110,7 @@ function search(_page){
     }catch (e) {
         alert('#btn-search ' + e.message);
     }
-
 }
-
-
 // Link tới một đưỡng dẫn khác
 function fnc_refer_link(_company_cd){
     try {
@@ -172,7 +130,6 @@ function fnc_refer_link(_company_cd){
     } catch (e) {
         alert('fnc_refer_link:' + e.message);
     }
-
 }
 
 function validate() {
@@ -185,7 +142,6 @@ function validate() {
 
     return true;
 }
-
 // Fixed header
 function jTableFixedHeader(){
 
@@ -354,5 +310,3 @@ function jTableFixedHeader(){
     }
 
 }
-
-

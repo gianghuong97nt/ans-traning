@@ -1,0 +1,16 @@
+{
+    "name": "Suplier",
+    "alias": "suplier",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Suplier\\Providers\\SuplierServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

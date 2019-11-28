@@ -49,7 +49,7 @@ class M003lController extends Controller
         
         if($request->ajax()) {
             $param = $request->all();
-            $data   = Dao::call_stored_procedure('SPC_M003L_INQ02',$param);
+            $data   = Dao::call_stored_procedure('SPC_M003L_INQ2',$param);
             $result = array(
                     'status' => '200',
                     'data' => array($data[0][0]),
@@ -57,11 +57,13 @@ class M003lController extends Controller
             }      
         return response()->json($result);
     }
+
     public function postSearch(Request $request)
     {
         if($request->ajax()) {
             $param = $request->all();
             $data  = Dao::call_stored_procedure('SPC_M003L_FND1', $param);
+             
             return view('master::m003l.search')
             ->with('data', $data)
             ->with('paging', $data[1][0]);

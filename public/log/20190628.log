@@ -1,0 +1,12 @@
+2019-06-28 18:55:09 could not find driver
+2019-06-28 18:55:14 could not find driver
+2019-06-28 18:55:41 could not find driver
+2019-06-28 18:55:54 could not find driver
+2019-06-28 18:57:11 could not find driver
+2019-06-28 18:57:39 EXEC SPC_GET_MESSAGE_LST
+2019-06-28 18:57:48 EXEC SPC_LOGIN_ACT1 'ans713','1','','192.168.5.130';
+2019-06-28 18:57:48 EXEC SPC_LOGIN_INQ1 'ans713';
+2019-06-28 18:57:48 EXEC SPC_S003_LST1 'ans713';
+2019-06-28 18:57:49 EXEC SPC_DB001_INQ1 'ans713';
+2019-06-28 18:58:11 EXEC SPC_M003L_INQ1
+2019-06-28 18:58:11 SQLSTATE[42000]: [Microsoft][ODBC Driver 13 for SQL Server][SQL Server]Could not find stored procedure 'SPC_M003L_INQ1'.

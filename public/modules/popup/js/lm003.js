@@ -17,9 +17,7 @@ $(document).ready(function () {
 
 function initTrigger() {
     try {
-        if($('#searchFlag').val()==1){
-            search(1);
-        }
+        search(1);
     } catch (e) {
         alert('iniTrigger' + e.message);
     }
@@ -66,6 +64,10 @@ function initEvents() {
                 search(1);
             }
         });
+
+        $(document).on('click', '#btn-close-popup', function () {
+            parent.$.colorbox.close();
+        });
     } catch (e) {
         alert('initialize: ' + e.message);
     }
@@ -101,7 +103,6 @@ function search(page){
     catch(e){
         alert('search: ' + e.message);
     }
-    
 }
 
 //set tabindex for control
@@ -113,7 +114,6 @@ function tabIndex(){
 //transfer data from popup to popup control
 function transfer(element) {
     try {
-        debugger;
         var row_obj = (typeof element.attr('row_data')!='undefined')?JSON.parse(element.attr('row_data')):{};
         var parents = {};
         //locate calling source

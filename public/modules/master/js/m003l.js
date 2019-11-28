@@ -30,6 +30,7 @@ $(document).ready(function () {
  *
  */
 function initialize() {
+	$("#emp_nm").focus();
 	try {
 		initItem(_obj);
 		// 
@@ -84,9 +85,15 @@ function initEvents() {
 		//btn link_section
 		$(document).on('click', '.link_section', function () {
 			try{
-				var user_id     = $(this).attr('user_id');
-				//
-				fnc_refer_link(user_id);
+				var company_cd   = $(this).attr('company_cd');
+				var emp_cd  	 = $(this).attr('emp_cd');
+			
+				var employee =	{
+					'company_cd'		: company_cd 
+				,	'emp_cd'			: emp_cd 
+				// ,	'mode'				: mode
+				};
+				fnc_refer_link(employee);
 			} catch (e) {
 				alert('link_section:' + e.message);
 			}
@@ -101,7 +108,7 @@ function initEvents() {
 				alert('Eror #btn-search ' + e.message);
 			}
 		});
-		$(document).on('change', '#company_cd', function() {
+		$(document).on('change', '#section_cd', function() {
 			try {
 				searchCD();
 			} catch (e) {
@@ -121,13 +128,6 @@ function initEvents() {
 			}
 		});
 		//edit click even
-		$(document).on('click', '.fa-pencil', function () {
-			try {
-				window.location.href = "/m003?id="+$(this).attr("company_cd");
-			} catch (e) {
-				alert('.pagination li' + e.message);
-			}
-		});
 
 	} catch (e) {
 		alert('initialize: ' + e.message);
@@ -137,7 +137,7 @@ function initEvents() {
 /**
  * search function
  *
- * @author        :    ANS-ASIA CHINHNB - 2017/12/18 - create
+ * @author        :    ANS-ASIA  - 2017/12/18 - create
  * @author        :
  */
 function search(_page){
@@ -145,10 +145,10 @@ function search(_page){
 		var data = {};
 		var pageSize = 50;
 		//
-		data['employee_id']		= $('#employee_id').val();
-		data['employee_nm']		= $('#employee_nm').val();
-		data['employee_type']	= $('#employee_type').val();
-		data['company_cd']		= $('#company_cd').attr('company_cd');
+		data['company_cd']		= $('#company_cd').val();
+		data['emp_nm']			= $('#emp_nm').val();
+		data['emp_div']			= $('#emp_div').val();
+		data['section_cd']		= $('#section_cd').val();
 		data['page_size']		= pageSize;
 		data['page']			= _page;
 		//
@@ -177,7 +177,7 @@ function search(_page){
 function searchCD(){
 	try{
 		var data = {};
-		data.company_cd	=	$('#company_cd').val();
+		data.section_cd	=	$('#section_cd').val();
 		//
 		$.ajax({
 		type: 'POST',
@@ -189,8 +189,7 @@ function searchCD(){
 			switch (res['status']) {
                     // Success
                     case '200':
-                     	$('#company_cd').val(res['data'][0].section_nm);
-                     	$('#company_cd').attr('company_cd',res['data'][0].section_cd);
+                     	$('#display_section_nm').html(res['data'][0].section_nm);
 					break;
 					default:
 					break;
@@ -209,27 +208,26 @@ function searchCD(){
 /**
  * fnc_refer_link function
  *
- * @author        :    ANS-ASIA CHINHNB - 2017/12/18 - create
+ * @author        :    ANS-ASIA  - 2017/12/18 - create
  * @author        :
  */
-function fnc_refer_link(_user_id){
-// 	try {
-// 		var objRefer = {
-// 			init_data : {
-// 				'user_id' : _user_id
-// 			},
-// 			back_data : {
-// 				'search_flag'				: '1'
-// 			,	'message_search_condition'	: getHtmlCondition('.search-condition')
-// 			,	'pageIndex'					: (($('.pagination:first li.active a').length > 0) ? $.trim($('.pagination:first li.active a').text()) : '1')
-// 			},
-// 			back_link : '/system/s001l',
-// 			back_screen : __screen
-// 		};
-// 		postParamToLink('S001', 'detail', objRefer, '/system/s001');
-// 	} catch (e) {
-// 		alert('fnc_refer_link:' + e.message);
-// 	}
+function fnc_refer_link(employee){
+	try {
+		var objRefer = {
+			init_data : employee
+			,
+			back_data : {
+				'search_flag'				: '1'
+			,	'message_search_condition'	: getHtmlCondition('.search-condition')
+			,	'pageIndex'					: (($('.pagination:first li.active a').length > 0) ? $.trim($('.pagination:first li.active a').text()) : '1')
+			},
+			back_link : '/master/m003l',
+			back_screen : __screen
+		};
+		postParamToLink('M003', 'detail', objRefer, '/master/m003');
+	} catch (e) {
+		alert('fnc_refer_link:' + e.message);
+	}
 }
 
 /**

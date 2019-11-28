@@ -85,7 +85,7 @@
 		</div><!--.panel-body -->
 	</div><!--.panel panel-flat -->
 	<div id="result" class="panel panel-flat">
-		@include('popup::search.searchlm004')
+		@include('master::m004l.search')
 	</div>
 </div><!--.row -->
 <input type="hidden" value="{{ $data["searchFlag"] }}" id="searchFlag">

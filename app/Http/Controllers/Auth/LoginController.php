@@ -60,7 +60,7 @@ class LoginController extends Controller
             //
             //
             $data = Dao::call_stored_procedure('SPC_LOGIN_ACT1', $params);
-
+            // dd($data);
             if ($data[0][0]['Data'] == 'Exception' || $data[0][0]['Data'] == 'EXCEPTION') {
                 $result = array(
                     'status' => '202',
@@ -89,6 +89,7 @@ class LoginController extends Controller
                     }
                     $user_info['user_id']=$params['user_id'];
                     $data_info = Dao::call_stored_procedure('SPC_LOGIN_INQ1',  $user_info);
+                    // dd($data_info);
                     $request->session()->put('user_id',$data_info[0][0]['user_id']);
                     $request->session()->put('user_name',$data_info[0][0]['user_nm']);
                     $request->session()->put('company_cd',$data_info[0][0]['company_cd']);

@@ -1,5 +1,5 @@
 @php
-$col    = isset($col) ? $col : 'col-md-3 col-sm-3 col-xs-12';
+$col    = isset($col) ? $col : 'col-md-5 col-sm-5 col-xs-12';
 @endphp
 
 <div class="{{$col}} popup" data-id="emp_cd" data-nm="emp_nm" data-search="lm003" data-istable="{{ $istable or 0}}"
@@ -18,9 +18,7 @@ $col    = isset($col) ? $col : 'col-md-3 col-sm-3 col-xs-12';
         </div>
         <div style="{{ isset($istable) ? 'display: none;' : 'display: table-cell;' }};vertical-align: middle;" class="input-group-text">
             @if(isset($isinputname))
-                <input maxlength="50" type="text" class="form-control left-radius right-radius m-w-popup-text emp_nm {{$name_class or ''}}"
-                       value="{{ $value or '' }}" id="{{$name_id or ''}}"
-                       tabindex="" style="width: 100%; border-top-right-radius: 3px!important; border-bottom-right-radius: 3px!important;">
+                <input maxlength="50" type="text" class="form-control left-radius right-radius m-w-popup-text emp_nm {{$name_class or ''}}" value="{{ $value or '' }}" id="{{$name_id or ''}}" tabindex="" style="width: 100%; border-top-right-radius: 3px!important; border-bottom-right-radius: 3px!important;">
             @else
                 <span class="input-group-text emp_nm {{$name_class or ''}}" id="{{$name_id or ''}}" style="{{ isset($istable) ? 'display: none;' : '' }}">{{ $value or '' }}
 				</span>

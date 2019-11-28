@@ -38,6 +38,9 @@ Route::group(['middleware' => 'checkLogin', 'prefix' => 'master', 'namespace' =>
 
     //M004
     Route::get('/m004', 'm004Controller@index');
+     Route::post('/m004/save', 'm004Controller@save');
+    Route::post('/m004/refer_client', 'm004Controller@refer_client');
+    Route::post('/m004/delete', 'm004Controller@delete');
     //M004L - ANS-ASIA TUANTV
     Route::get('/m004l', 'M004lController@index');
     Route::post('/m004l/search', 'm004lController@postSearch');
@@ -60,7 +63,8 @@ Route::group(['middleware' => 'checkLogin', 'prefix' => 'master', 'namespace' =>
    
     //M008
     Route::get('/m008', 'm008Controller@getIndex');
-    
+    Route::post('/m008/search', 'm008Controller@search');
+    Route::post('/m008/save', 'm008Controller@save');
     //M010
     Route::get('/m010', 'm010Controller@index');
 

@@ -10,7 +10,6 @@ $(document).ready(function () {
     try {
         initialize();
         initEvents();
-        initTrigger();
     } catch (e) {
         alert('ready: ' + e.message);
     }
@@ -18,20 +17,10 @@ $(document).ready(function () {
 function initialize() {
     try {
         initItem(_obj);
-        //Fixed
+        $('#btn-save').addClass('disable');
         jTableFixedHeader();
     } catch (e) {
         alert('initialize: ' + e.message);
-    }
-}
-function initTrigger() {
-    try {
-        // auto search
-        if ($('#searchFlag').val() == '1') {
-            search();
-        }
-    } catch (e) {
-        alert('iniTrigger' + e.message);
     }
 }
 function initEvents() {
@@ -39,71 +28,47 @@ function initEvents() {
         //btn search
         $(document).on('click', '#btn-search', function() {
             try {
-                $("#searchFlag").val(1);
                 search();
-
             } catch (e) {
-                alert('Eror #btn-search ' + e.message);
+                alert('Error #btn-search ' + e.message);
             }
         });
         //btn search
         $(document).on('click', '#btn-save', function() {
             try {
-                if($('#table-area tbody tr.no-data').length >0){
-                    // jError('処理が失敗しました。');
-                    jMessage(17, function(r){
-                    });
-
-                }else{
-                    jMessage(1, function(r){
-                        if(r) {
-                            if (validate(_obj)) {
-                                save();
-                            }
-                        }
-                    });
-                }
-
+                jMessage(1, function(r){
+                    if(r) {
+                        save();
+                    }
+                });
             } catch (e) {
-                alert('Eror #btn-save ' + e.message);
+                alert('Error #btn-save ' + e.message);
             }
         });
-        $(document).on('keypress', '.charac_special', function () {
-            try {
-                return blockSpecialChar(event);
-            } catch (e) {
-                alert('special characters' + e.message);
+        $(document).on('keydown', '.emp_cd2', function (e) {
+            if (e.keyCode == 13) {
+                $('#refer-search').trigger('change');
             }
         });
     } catch (e) {
         alert('initialize: ' + e.message);
     }
 }
-function referEmp(emp_cd) {
-    try{
-        var data    = {};
-        data.emp_cd = emp_cd;
-        $.ajax({
-            type: 'POST',
-            url: '/monthly/i009/refer',
-            dataType: 'json',
-            data: data,
-            success: function (res) {
-                $('.changeEmp_cd').find('.emp_nm').text(res['emp_nm']);
-                $('.changeEmp_cd').find('.emp_cd').val(res['emp_cd']);
-                $('.changeEmp_cd').removeClass();
-            },
-            // Ajax error
-            error: function (res) {
-            }
-        });
-    }catch (e) {
-        alert('refer employee_cd ' + e.message);
-    }
-}
 function search(){
     try{
-        var data = getData(_obj);
+        var data = {};
+        data.project_nm     = $('#project_nm').val();
+        data.client_cd      = $('#client_cd').val();
+        data.client_br_cd   = $('#client_br_cd').val();
+        data.emp_cd         = $('#emp_cd').val();
+        data.sales_recorded_date_fr = $('#sales_recorded_date_fr').val();
+        data.sales_recorded_date_to = $('#sales_recorded_date_to').val();
+        if($('#sales_recorded_date_fr').val() != ''){
+            data.sales_recorded_date_fr = $('#sales_recorded_date_fr').val() + '/01';
+        }
+        if($('#sales_recorded_date_to').val() != ''){
+            data.sales_recorded_date_to = $('#sales_recorded_date_to').val() + '/01';
+        }
         $.ajax({
             type: 'POST',
             url: '/monthly/i009/search',
@@ -115,10 +80,13 @@ function search(){
                 $("#result").append(res);
                 if($('#table-area tbody tr.no-data').length >0){
                     $('#project_nm').focus();
+                    $('#btn-save').addClass('disable');
+                }else {
+                    $('#btn-save').removeClass('disable');
+                    $('table .emp_cd:first').focus();
+                    _setTabIndex();
+                    jTableFixedHeader();
                 }
-                $('table .emp_cd:first').focus();
-                _setTabIndex();
-                jTableFixedHeader();
             },
             // Ajax error
             error: function (res) {
@@ -131,11 +99,16 @@ function search(){
 
 function getAllDataTable(target_table){
     var data=[];
+    var j = 0;
     target_table.find('tbody tr:visible').each(function(i){
         var element={};
-        element['project_no']   =  $(this).find('.project_no').attr('project_no');
-        element['emp_cd']  =  $(this).find('.emp_cd').val();
-        data[i]=element;
+        if($(this).find('.emp_cd').val() != $(this).closest('tr').find('.empcd_old').text()){
+            element['id']   = i+1;
+            element['project_no']   =  $(this).find('.project_no').attr('project_no');
+            element['emp_cd']  =  $(this).find('.emp_cd').val();
+            data[j]=element;
+            j++;
+        }
     });
     return data;
 }
@@ -171,6 +144,10 @@ function save(){
                     case '203':
                         jError('Erorr');
                         break;
+                    case '204':
+                        jMessage(36,function(){
+                        });
+                        break;
                     default:
                         break;
                 }
@@ -179,17 +156,6 @@ function save(){
     }catch (e) {
         alert('#btn-search ' + e.message);
     }
-}
-
-function validate() {
-    var _errors = 0;
-    if (!_validate($('.content'))) {
-        _errors++;
-    }
-    if (_errors > 0)
-        return false;
-
-    return true;
 }
 // Fixed header
 function jTableFixedHeader(){
@@ -359,4 +325,3 @@ function jTableFixedHeader(){
     }
 
 }
-

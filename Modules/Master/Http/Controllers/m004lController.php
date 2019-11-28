@@ -2,13 +2,12 @@
 /**
  * TOSMAC Project
  *
- * S001l controller
+ * M004L controller
  *
  * @copyright       :   ANS-ASIA
  * @author          :   vietdt - 2019/05/30 - create
  * @author          :
  */
-
 namespace Modules\Master\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -51,6 +50,7 @@ class m004lController extends Controller
     {
         if($request->ajax()) {
             $param = $request->all();
+            $param['company_cd'] = $request->session()->get('company_cd');
             $data  = Dao::call_stored_procedure('SPC_M004L_FND1', $param);
             return view('master::m004l.search')
                 ->with('data', $data)

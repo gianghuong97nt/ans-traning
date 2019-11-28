@@ -162,7 +162,9 @@ function tabIndex(){
 //transfer data from popup to popup control
 function transfer(element) {
     try {
+        // console.log(element);
         var row_obj = (typeof element.attr('row_data')!='undefined')?JSON.parse(element.attr('row_data')):{};
+        // console.log(row_obj);
         var parents = {};
         //locate calling source
         if (istable  == 1) {

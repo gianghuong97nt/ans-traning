@@ -34,37 +34,32 @@
                 </div>
             </div>
             <div class="panel-body search-condition">
-                @if (isset($oldConditionSearchHtml))
-                    {!! $oldConditionSearchHtml !!}
-                @else
-                    <div class="form-group">
-                        <label class="col-md-2 col-sm-2 col-xs-12 control-label">社員名(カナ)</label>
-                        <div class="col-md-3 col-sm-3 col-xs-12">
-                            <input value="" type="tel" id="emp_nm" class=" form-control">
-                        </div>
+                <div class="form-group">
+                    <label class="col-md-2 col-sm-2 col-xs-12 control-label">社員名(カナ)</label>
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <input value="" type="tel" id="emp_nm" class=" form-control">
                     </div>
-                    <div class="form-group">
-                        <label class="col-md-2 col-sm-2 col-xs-12 control-label">社員区分</label>
-                        <div class="col-md-3 col-sm-3 col-xs-12">
-                            <select class="form-control" id="emp_div" style="width: 110px">
-                                <option></option>
-                                @foreach($emp_divs[0] as $emp_div)
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 col-sm-2 col-xs-12 control-label">社員区分</label>
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <select class="form-control" id="emp_div" style="width: 110px">
+                            <option></option>
+                            @foreach($emp_divs[0] as $emp_div)
                                 <option value="{{$emp_div['emp_div']}}">{{$emp_div['name']}}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                            @endforeach
+                        </select>
                     </div>
-                    <div class="form-group fix_size">
-                        <label class="col-md-2 col-sm-2 col-xs-12 control-label ">部課CD</label>
-                        @include('popup.search_section', array('data'=>'lm003','key'=>'', 'col'=>'col-md-4 col-sm-5 col-xs-12',
-                        'value'=>'','id'=>'section_cd','name_id'=>'display_emp_nm'))
-                    </div>
-                @endif
+                </div>
+                <div class="form-group fix_size">
+                    <label class="col-md-2 col-sm-2 col-xs-12 control-label ">部課CD</label>
+                    @include('popup.search_section', array('data'=>'lm003','key'=>'', 'col'=>'col-md-4 col-sm-5 col-xs-12',
+                    'value'=>'','id'=>'section_cd','name_id'=>'display_emp_nm'))
+                </div>
             </div>
         </div>
         <div id="result" class="panel panel-flat">
             @include('popup::search.searchlm003')
         </div>
     </div>
-    <input type="hidden" value="{{ $searchFlag }}" id="searchFlag">
 @endsection

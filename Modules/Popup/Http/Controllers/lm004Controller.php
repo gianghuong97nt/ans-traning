@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Input;
 
 class lm004Controller extends Controller
 {
-    protected $detailScreen = 'M004';
+    protected $detailScreen = 'LM004';
     /**
      * display search
      *
@@ -27,6 +27,7 @@ class lm004Controller extends Controller
         $data['data']['searchFlag'] = 1;
         $name_type  = '22';
         $number_cd  = '0';
+
         $dataCombo = Dao::call_stored_procedure('SPC_COM_M101_INQ1', array($name_type,$number_cd));
         return view('popup::search.lm004', $data)
              ->with('dataCombo',$dataCombo);;
@@ -36,10 +37,12 @@ class lm004Controller extends Controller
     {
         if($request->ajax()) {
         $param = $request->all();
-        $data  = Dao::call_stored_procedure('SPC_LM004_FND1', $param);
-        // dd($data);
-        return view('popup::search.searchlm004')
+        $param['company_cd'] = $request->session()->get('company_cd');
+        $data  = Dao::call_stored_procedure('SPC_M004L_FND1', $param);
+        $popup =   '';
+        return view('master::m004l.search')
             ->with('data', $data)
+            ->with('popup', $popup)
             ->with('paging', $data[1][0]);
         }
     }

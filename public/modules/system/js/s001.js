@@ -261,7 +261,7 @@ function refer_user(_user_id, callback) {
 					$('#btn-delete').removeClass('disable');
 				}else {
 					clearData(_obj,['user_id']);
-					//`
+					//
 					$('#display_emp_nm').text('');
 					$('#display_company_nm').text('');
 					$('#btn-delete').addClass('disable');

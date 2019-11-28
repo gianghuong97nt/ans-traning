@@ -12,4 +12,13 @@ Route::group(['middleware' => 'checkLogin', 'prefix' => 'monthly', 'namespace' =
     Route::post('/i009/save', 'I009Controller@save');
 
     Route::post('/i009/refer', 'I009Controller@refer');
+
+    //i008
+    Route::get('/i008', 'I008Controller@index');
+
+    Route::post('/i008/result', 'I008Controller@searchResult');
+    Route::post('/i008/sum', 'I008Controller@searchSum');
+    Route::post('/i008/save', 'I008Controller@save');
+
+    // Route::post('/i009/refer', 'I009Controller@refer');
 });

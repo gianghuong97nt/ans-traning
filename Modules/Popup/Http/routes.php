@@ -11,6 +11,8 @@ Route::group(['middleware' => 'writeLog','prefix' => 'popup', 'namespace' => 'Mo
 	Route::get('/search/l003','l003Controller@getIndex');
 	Route::get('/search/l001','l001Controller@getIndex');
 	Route::post('/search/l001/search','l001Controller@postSearch');
+	Route::post('/search/l001/refer_client','l001Controller@referClient');
+
 	Route::get('/search/l005','l005Controller@getIndex');
 	Route::get('/search/i002_1','i002_1Controller@getIndex');
 	Route::get('/search/l007','l007Controller@getIndex');

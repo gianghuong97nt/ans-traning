@@ -1,11 +1,3 @@
-/**
- * TOSMAC PROJECT
- * user master-s001
- *
- * @copyright       :   ANS
- * @author          :   chinhnb - 2017/12/19 - create
- * @author          :
- */
 var _obj = {
       'company_cd'			: {'type': 'text', 'attr': {'maxlength': '4',   'class': 'required numeric'				, 'tabindex': '1'}}
     , 'company_nm'		    : {'type': 'text', 'attr': {'maxlength': '50',   'class': ''	        , 'tabindex': '2'}}
@@ -36,13 +28,7 @@ $(document).ready(function () {
         alert('ready: ' + e.message);
     }
 });
-/**
- * function initialize
- *
- * @author  :   chinhnb - 2017/12/18 - create
- * @author  :
- *
- */
+
 function initialize() {
     try {
         initItem(_obj);
@@ -68,13 +54,7 @@ function initialize() {
         alert('initialize: ' + e.message);
     }
 }
-/**
- * function initEvents
- *
- * @author  :   chinhnb - 2017/12/19 - create
- * @author  :
- *
- */
+
 function initEvents() {
     try {
         //btn list
@@ -162,12 +142,6 @@ function referCompany() {
     }
 }
 
-/**
- * save function
- *
- * @author        :    ANS-CHINHNB - 2017/12/11 - create
- * @author        :
- */
 function save(){
     try {
         var data = getData(_obj);
@@ -186,7 +160,7 @@ function save(){
                     case '200':
                         jMessage(2,function(){
                             var company_cd = res['data'][0]['company_cd'];
-                            window.location.href = '/master/m001?company_cd='+company_cd;
+                            referCompany(company_cd);
                         });
                         break;
                     // Data Validate
@@ -212,12 +186,7 @@ function save(){
     }
 }
 
-/**
- * delete function
- *
- * @author        :    ANS-ASIA CHINHNB - 2017/12/11 - create
- * @author        :
- */
+
 function del() {
     try {
         var data = {};
@@ -259,12 +228,6 @@ function del() {
 }
 
 
-/**
- * back function
- *
- * @author        :    ANS-CHINHNB - 2017/12/19 - create
- * @author        :
- */
 function back() {
     if (_is_from_search == '1') {
         _back_data['search_flag'] = '1';
@@ -281,12 +244,6 @@ function back() {
 
 }
 
-/**
- * validate function
- *
- * @author        :    ANS-ASIA CHINHNB - 2017/12/19 - create
- * @author        :
- */
 function validate() {
     var _errors = 0;
     if (!_validate($('.content'))) {

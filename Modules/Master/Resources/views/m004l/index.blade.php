@@ -90,42 +90,7 @@
 		<!--  -->
 	</div><!--.panel panel-flat-->
 	<div id="result" class="panel panel-flat">
-		<div class="panel-heading ">
-			<h6 class="panel-title text-bold">参照一覧</h6>
-		</div>
-		<div class="panel-body w-pading-top">
-			<div class="w-pading-bottom">
-			</div>
-			<div class="no-padding">
-				<div class="wmd-view-topscroll">
-					<div class="scroll-div1"></div>
-				</div>
-				<div class="table-responsive table-custom wmd-view">
-					<table class="table table-hover table-bordered table-xxs fixed-header" id="table-area" style="min-width: 1143px;">
-						<thead>
-							<tr class="col-table-header text-center">
-								<th class="text-center" width="40px">編</th>
-								<th class="text-center" width="60px">得意先CD</th>
-								<th class="text-center" width="160px">得意先名</th>
-								<th class="text-center" width="160px">得意先名カナ</th>
-								<th class="text-center" width="60px">支店CD</th>
-								<th class="text-center" width="160px">支店名</th>
-								<th class="text-center" width="160px">支店名カナ</th>
-								<th class="text-center" width="100px">会社名</th>
-								<th class="text-center" width="160px">得意先区分</th>
-								<th class="text-center" width="80px">締日</th>
-								<th class="text-center">備考</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td colspan="11" class="text-center">{!! trans('translates.messages.17') !!}</td>
-							</tr>
-						</tbody>
-					</table>
-				</div><!--.table-responsive table-custom -->
-			</div><!--.no-padding -->
-		</div><!--.panel-body -->
+		@include('master::m004l.search')	
 	</div><!--.panel panel-flat -->
 </div><!--.row form-horizontal -->
 	<input type="hidden" value="{{ $searchFlag }}" id="searchFlag">

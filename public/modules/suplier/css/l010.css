@@ -1,0 +1,12 @@
+#sales_recorded_date_fr, #sales_recorded_date_to{
+    width: 93px;
+    display: inline-block
+}
+.hover { background-color:#f5f5f5;}
+/*.tr-1:hover, .tr-1:hover + tr {
+    background-color:#f5f5f5; 
+}*/
+/*.tr-2:hover, .tr-2:hover:before {
+    background-color:#f5f5f5; 
+}
+*/

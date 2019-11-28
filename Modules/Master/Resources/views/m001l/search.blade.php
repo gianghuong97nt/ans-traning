@@ -3,7 +3,7 @@
 </div>
 <div class="panel-body w-pading-top">
     <div class="w-pading-bottom">
-        @if(isset($data[0][0]['totalRecord'])&&$paging['totalRecord'] != 0)
+        @if(isset($data[1][0]['totalRecord'])&&$paging['totalRecord'] != 0)
             <div class="w-pading-search-top">
                 <label style="margin-top: 5px;display: inline-block;">{{ Paging::showText($paging) }}</label>
                 <div class=" text-right" style="display: inline-block;float: right;" tabindex="4">

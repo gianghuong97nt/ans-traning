@@ -1,0 +1,30 @@
+table tbody tr td.text-overfollow {
+    max-width: 20px;
+}
+.table tbody tr td,
+.table thead tr th {
+    white-space: nowrap;
+}
+@media screen and (max-width:768px) {
+    .panel-body .form-group {
+        margin-right: 0px !important;
+    }
+}
+
+.fa-calendar {
+    margin-bottom:4px;
+    width: 20px;
+    height: 20px;
+}
+/*input {
+    width: 60px ;
+    display: inline-block;
+}*/
+
+#sales_recorded_date_fr, #sales_recorded_date_to{
+    width: 93px;
+    display: inline-block
+}
+/*input{
+    width: 30px;
+}*/

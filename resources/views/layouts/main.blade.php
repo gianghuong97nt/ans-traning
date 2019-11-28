@@ -56,7 +56,7 @@
 
 		{!! public_url('js/common/jquery-ui.js')!!}
 		{!! public_url('js/common/jquery.ympicker.js')!!}
-
+		{{-- <script src="https://code.jquery.com/jquery-migrate-1.4.1.js" type="text/javascript" charset="utf-8" async defer></script> --}}
 		{!! public_url('js/common/jquery-migrate-1.2.1.js')!!}
 		{!! public_url('js/common/jquery.autoKana.js')!!}
 		

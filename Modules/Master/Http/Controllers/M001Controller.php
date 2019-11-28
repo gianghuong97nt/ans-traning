@@ -23,10 +23,17 @@ class M001Controller extends Controller
 {
     protected $screen = 'M001';
 
-    public function index(Request $request)
+    public function index()
     {
-        $company_cd = $request->all();
-        $data = Dao::call_stored_procedure('SPC_M001_INQ1',$company_cd);
+        $company_cd = '';
+        if(Session::has('link-session.'.$this->screen)) {
+            $screenSession  = Session::get('link-session.'.$this->screen);
+            if (isset($screenSession['init_data']['company_cd'])) {
+                $company_cd = $screenSession['init_data']['company_cd'];
+            }
+        }
+        $allParams = array($company_cd);
+        $data = Dao::call_stored_procedure('SPC_M001_INQ1',$allParams);
         if (isset($data[0][0]['company_cd']) && $data[0][0]['company_cd'] != ''){
             $mode = 'U';
         }else{

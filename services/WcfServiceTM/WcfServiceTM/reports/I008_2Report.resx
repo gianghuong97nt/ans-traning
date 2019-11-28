@@ -1,0 +1,1014 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TXT_percent.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TXT_percent.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TXT_percent.Left" type="System.Single, mscorlib">
+    <value>5.991733</value>
+  </data>
+  <data name="TXT_percent.Style" xml:space="preserve">
+    <value>color: Black; font-weight: bold; text-align: right; vertical-align: middle</value>
+  </data>
+  <data name="TXT_percent.SummaryGroup" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TXT_percent.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TXT_percent.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TXT_percent.Width" type="System.Single, mscorlib">
+    <value>1.591733</value>
+  </data>
+  <data name="TextBox2.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBox2.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TextBox2.Left" type="System.Single, mscorlib">
+    <value>1.885433</value>
+  </data>
+  <data name="TextBox2.Style" xml:space="preserve">
+    <value>color: Black; font-weight: bold; text-align: center; vertical-align: middle</value>
+  </data>
+  <data name="TextBox2.SummaryGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBox2.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox2.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBox2.Width" type="System.Single, mscorlib">
+    <value>1.103543</value>
+  </data>
+  <data name="TXT_gross_estimate_amt.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_gross_estimate_amt.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TXT_gross_estimate_amt.Left" type="System.Single, mscorlib">
+    <value>4.433858</value>
+  </data>
+  <data name="TXT_gross_estimate_amt.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="TXT_gross_estimate_amt.Style" xml:space="preserve">
+    <value>color: Black; font-weight: bold; text-align: right; vertical-align: middle</value>
+  </data>
+  <data name="TXT_gross_estimate_amt.SummaryGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_gross_estimate_amt.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TXT_gross_estimate_amt.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TXT_gross_estimate_amt.Width" type="System.Single, mscorlib">
+    <value>1.557875</value>
+  </data>
+  <data name="TXT_sales_estimate_amt.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_sales_estimate_amt.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TXT_sales_estimate_amt.Left" type="System.Single, mscorlib">
+    <value>2.988976</value>
+  </data>
+  <data name="TXT_sales_estimate_amt.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="TXT_sales_estimate_amt.Style" xml:space="preserve">
+    <value>color: Black; font-weight: bold; text-align: right; vertical-align: middle</value>
+  </data>
+  <data name="TXT_sales_estimate_amt.SummaryGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_sales_estimate_amt.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TXT_sales_estimate_amt.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TXT_sales_estimate_amt.Width" type="System.Single, mscorlib">
+    <value>1.444882</value>
+  </data>
+  <data name="TXT_emp_nm.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TXT_emp_nm.Left" type="System.Single, mscorlib">
+    <value>0.7511811</value>
+  </data>
+  <data name="TXT_emp_nm.Style" xml:space="preserve">
+    <value>color: Black; font-weight: bold; text-align: center; text-justify: auto; vertical-align: middle</value>
+  </data>
+  <data name="TXT_emp_nm.SummaryGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_emp_nm.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TXT_emp_nm.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TXT_emp_nm.Width" type="System.Single, mscorlib">
+    <value>1.133071</value>
+  </data>
+  <data name="Line18.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line18.Left" type="System.Single, mscorlib">
+    <value>0.7513779</value>
+  </data>
+  <data name="Line18.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line18.Width" type="System.Single, mscorlib">
+    <value>0.000196814537</value>
+  </data>
+  <data name="Line19.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line19.Left" type="System.Single, mscorlib">
+    <value>7.583465</value>
+  </data>
+  <data name="Line19.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line19.Width" type="System.Single, mscorlib">
+    <value>9.536743E-07</value>
+  </data>
+  <data name="Line21.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line21.Left" type="System.Single, mscorlib">
+    <value>1.885433</value>
+  </data>
+  <data name="Line21.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line21.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line25.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line25.Left" type="System.Single, mscorlib">
+    <value>2.988976</value>
+  </data>
+  <data name="Line25.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line25.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line29.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line29.Left" type="System.Single, mscorlib">
+    <value>5.991733</value>
+  </data>
+  <data name="Line29.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line29.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line6.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line6.Left" type="System.Single, mscorlib">
+    <value>4.435827</value>
+  </data>
+  <data name="Line6.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line6.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line2.Height" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line2.Left" type="System.Single, mscorlib">
+    <value>1.8854332</value>
+  </data>
+  <data name="Line2.Top" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line2.Width" type="System.Single, mscorlib">
+    <value>5.69409466</value>
+  </data>
+  <data name="TXT_section_nm.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_section_nm.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TXT_section_nm.Left" type="System.Single, mscorlib">
+    <value>1.24252</value>
+  </data>
+  <data name="TXT_section_nm.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="TXT_section_nm.Style" xml:space="preserve">
+    <value>color: Black; font-weight: bold; text-align: left; vertical-align: middle</value>
+  </data>
+  <data name="TXT_section_nm.SummaryGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TXT_section_nm.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TXT_section_nm.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TXT_section_nm.Width" type="System.Single, mscorlib">
+    <value>1.746457</value>
+  </data>
+  <data name="LBL_emp_cd.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LBL_emp_cd.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="LBL_emp_cd.Left" type="System.Single, mscorlib">
+    <value>0.7523623</value>
+  </data>
+  <data name="LBL_emp_cd.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="LBL_emp_cd.Style" xml:space="preserve">
+    <value>color: Black; font-weight: bold; text-align: left; vertical-align: middle</value>
+  </data>
+  <data name="LBL_emp_cd.SummaryGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LBL_emp_cd.Text" xml:space="preserve">
+    <value>部課:
+ 
+ : </value>
+  </data>
+  <data name="LBL_emp_cd.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LBL_emp_cd.Width" type="System.Single, mscorlib">
+    <value>0.4901575</value>
+  </data>
+  <data name="Label1.Height" type="System.Single, mscorlib">
+    <value>0.335</value>
+  </data>
+  <data name="Label1.HyperLink" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Label1.Left" type="System.Single, mscorlib">
+    <value>2.018504</value>
+  </data>
+  <data name="Label1.Style" xml:space="preserve">
+    <value>font-family: MS PGothic; font-size: 18pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 1</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>予算設定</value>
+  </data>
+  <data name="Label1.Top" type="System.Single, mscorlib">
+    <value>0.05984252</value>
+  </data>
+  <data name="Label1.Width" type="System.Single, mscorlib">
+    <value>3.543701</value>
+  </data>
+  <data name="RPT_page.Height" type="System.Single, mscorlib">
+    <value>0.2</value>
+  </data>
+  <data name="RPT_page.Left" type="System.Single, mscorlib">
+    <value>6.112599</value>
+  </data>
+  <data name="RPT_page.Style" xml:space="preserve">
+    <value>color: Black; text-align: left</value>
+  </data>
+  <data name="RPT_page.Top" type="System.Single, mscorlib">
+    <value>0.322441</value>
+  </data>
+  <data name="RPT_page.Width" type="System.Single, mscorlib">
+    <value>1.470866</value>
+  </data>
+  <data name="RPT_date.Height" type="System.Single, mscorlib">
+    <value>0.2</value>
+  </data>
+  <data name="RPT_date.Left" type="System.Single, mscorlib">
+    <value>6.116536</value>
+  </data>
+  <data name="RPT_date.Style" xml:space="preserve">
+    <value>color: Black</value>
+  </data>
+  <data name="RPT_date.Top" type="System.Single, mscorlib">
+    <value>0.05984252</value>
+  </data>
+  <data name="RPT_date.Width" type="System.Single, mscorlib">
+    <value>1.466929</value>
+  </data>
+  <data name="TBL_month.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TBL_month.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TBL_month.Left" type="System.Single, mscorlib">
+    <value>1.885433</value>
+  </data>
+  <data name="TBL_month.Style" xml:space="preserve">
+    <value>background-color: Gray; color: Black; font-weight: bold; text-align: center; vertical-align: middle</value>
+  </data>
+  <data name="TBL_month.SummaryGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TBL_month.Text" xml:space="preserve">
+    <value>月
+
+</value>
+  </data>
+  <data name="TBL_month.Top" type="System.Single, mscorlib">
+    <value>0.2181102</value>
+  </data>
+  <data name="TBL_month.Width" type="System.Single, mscorlib">
+    <value>1.103543</value>
+  </data>
+  <data name="LBL_emp_nm.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LBL_emp_nm.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="LBL_emp_nm.Left" type="System.Single, mscorlib">
+    <value>0.7523623</value>
+  </data>
+  <data name="LBL_emp_nm.Style" xml:space="preserve">
+    <value>background-color: Gray; color: Black; font-weight: bold; text-align: center; vertical-align: middle</value>
+  </data>
+  <data name="LBL_emp_nm.SummaryGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LBL_emp_nm.Text" xml:space="preserve">
+    <value>部課名
+
+
+</value>
+  </data>
+  <data name="LBL_emp_nm.Top" type="System.Single, mscorlib">
+    <value>0.2181102</value>
+  </data>
+  <data name="LBL_emp_nm.Width" type="System.Single, mscorlib">
+    <value>1.133071</value>
+  </data>
+  <data name="TBL_percent.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TBL_percent.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TBL_percent.Left" type="System.Single, mscorlib">
+    <value>5.991733</value>
+  </data>
+  <data name="TBL_percent.Style" xml:space="preserve">
+    <value>background-color: Gray; color: Black; font-weight: bold; text-align: center; vertical-align: middle</value>
+  </data>
+  <data name="TBL_percent.SummaryGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TBL_percent.Text" xml:space="preserve">
+    <value>利益率</value>
+  </data>
+  <data name="TBL_percent.Top" type="System.Single, mscorlib">
+    <value>0.2181102</value>
+  </data>
+  <data name="TBL_percent.Width" type="System.Single, mscorlib">
+    <value>1.587795</value>
+  </data>
+  <data name="TBL_gross_estimate_amt.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TBL_gross_estimate_amt.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TBL_gross_estimate_amt.Left" type="System.Single, mscorlib">
+    <value>4.433858</value>
+  </data>
+  <data name="TBL_gross_estimate_amt.Style" xml:space="preserve">
+    <value>background-color: Gray; color: Black; font-weight: bold; text-align: center; vertical-align: middle</value>
+  </data>
+  <data name="TBL_gross_estimate_amt.SummaryGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TBL_gross_estimate_amt.Text" xml:space="preserve">
+    <value>利益予算</value>
+  </data>
+  <data name="TBL_gross_estimate_amt.Top" type="System.Single, mscorlib">
+    <value>0.2181103</value>
+  </data>
+  <data name="TBL_gross_estimate_amt.Width" type="System.Single, mscorlib">
+    <value>1.557875</value>
+  </data>
+  <data name="TBL_sales_estimate_amt.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TBL_sales_estimate_amt.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TBL_sales_estimate_amt.Left" type="System.Single, mscorlib">
+    <value>2.988976</value>
+  </data>
+  <data name="TBL_sales_estimate_amt.Style" xml:space="preserve">
+    <value>background-color: Gray; color: Black; font-weight: bold; text-align: center; vertical-align: middle</value>
+  </data>
+  <data name="TBL_sales_estimate_amt.SummaryGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TBL_sales_estimate_amt.Text" xml:space="preserve">
+    <value>売上予算
+</value>
+  </data>
+  <data name="TBL_sales_estimate_amt.Top" type="System.Single, mscorlib">
+    <value>0.2181103</value>
+  </data>
+  <data name="TBL_sales_estimate_amt.Width" type="System.Single, mscorlib">
+    <value>1.444882</value>
+  </data>
+  <data name="Line3.Height" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line3.Left" type="System.Single, mscorlib">
+    <value>0.7523623</value>
+  </data>
+  <data name="Line3.Top" type="System.Single, mscorlib">
+    <value>0.2181102</value>
+  </data>
+  <data name="Line3.Width" type="System.Single, mscorlib">
+    <value>6.831103</value>
+  </data>
+  <data name="Line5.Height" type="System.Single, mscorlib">
+    <value>0.196850389</value>
+  </data>
+  <data name="Line5.Left" type="System.Single, mscorlib">
+    <value>0.7515749</value>
+  </data>
+  <data name="Line5.Top" type="System.Single, mscorlib">
+    <value>0.2181102</value>
+  </data>
+  <data name="Line5.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line7.Height" type="System.Single, mscorlib">
+    <value>0.196850508</value>
+  </data>
+  <data name="Line7.Left" type="System.Single, mscorlib">
+    <value>1.885433</value>
+  </data>
+  <data name="Line7.Top" type="System.Single, mscorlib">
+    <value>0.2181102</value>
+  </data>
+  <data name="Line7.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line12.Height" type="System.Single, mscorlib">
+    <value>0.196850508</value>
+  </data>
+  <data name="Line12.Left" type="System.Single, mscorlib">
+    <value>2.988976</value>
+  </data>
+  <data name="Line12.Top" type="System.Single, mscorlib">
+    <value>0.2181102</value>
+  </data>
+  <data name="Line12.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line17.Height" type="System.Single, mscorlib">
+    <value>0.196850508</value>
+  </data>
+  <data name="Line17.Left" type="System.Single, mscorlib">
+    <value>4.433858</value>
+  </data>
+  <data name="Line17.Top" type="System.Single, mscorlib">
+    <value>0.2181102</value>
+  </data>
+  <data name="Line17.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line4.Height" type="System.Single, mscorlib">
+    <value>0.196850508</value>
+  </data>
+  <data name="Line4.Left" type="System.Single, mscorlib">
+    <value>7.583465</value>
+  </data>
+  <data name="Line4.Top" type="System.Single, mscorlib">
+    <value>0.2181102</value>
+  </data>
+  <data name="Line4.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line8.Height" type="System.Single, mscorlib">
+    <value>0.196850508</value>
+  </data>
+  <data name="Line8.Left" type="System.Single, mscorlib">
+    <value>5.991733</value>
+  </data>
+  <data name="Line8.Top" type="System.Single, mscorlib">
+    <value>0.2181102</value>
+  </data>
+  <data name="Line8.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line1.Height" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line1.Left" type="System.Single, mscorlib">
+    <value>0.7515748</value>
+  </data>
+  <data name="Line1.Top" type="System.Single, mscorlib">
+    <value>0.4149607</value>
+  </data>
+  <data name="Line1.Width" type="System.Single, mscorlib">
+    <value>6.83189</value>
+  </data>
+  <data name="TextBox7.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBox7.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TextBox7.Left" type="System.Single, mscorlib">
+    <value>5.991733</value>
+  </data>
+  <data name="TextBox7.Style" xml:space="preserve">
+    <value>color: Black; font-weight: bold; text-align: left; vertical-align: middle</value>
+  </data>
+  <data name="TextBox7.SummaryGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBox7.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox7.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBox7.Width" type="System.Single, mscorlib">
+    <value>1.591732</value>
+  </data>
+  <data name="TextBox6.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBox6.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TextBox6.Left" type="System.Single, mscorlib">
+    <value>4.433858</value>
+  </data>
+  <data name="TextBox6.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="TextBox6.Style" xml:space="preserve">
+    <value>color: Black; font-weight: bold; text-align: right; vertical-align: middle</value>
+  </data>
+  <data name="TextBox6.SummaryGroup" xml:space="preserve">
+    <value>GroupHeader1</value>
+  </data>
+  <data name="TextBox6.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox6.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBox6.Width" type="System.Single, mscorlib">
+    <value>1.557874</value>
+  </data>
+  <data name="TextBox5.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBox5.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TextBox5.Left" type="System.Single, mscorlib">
+    <value>2.994882</value>
+  </data>
+  <data name="TextBox5.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="TextBox5.Style" xml:space="preserve">
+    <value>color: Black; font-weight: bold; text-align: right; vertical-align: middle</value>
+  </data>
+  <data name="TextBox5.SummaryGroup" xml:space="preserve">
+    <value>GroupHeader1</value>
+  </data>
+  <data name="TextBox5.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox5.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBox5.Width" type="System.Single, mscorlib">
+    <value>1.444882</value>
+  </data>
+  <data name="LBL_sum.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="LBL_sum.HyperLink" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="LBL_sum.Left" type="System.Single, mscorlib">
+    <value>0.7523623</value>
+  </data>
+  <data name="LBL_sum.Style" xml:space="preserve">
+    <value>background-color: Gray; color: Black; font-family: MS Gothic; font-size: 10pt; font-weight: bold; text-align: center; text-justify: auto; vertical-align: middle; ddo-char-set: 1</value>
+  </data>
+  <data name="LBL_sum.Text" xml:space="preserve">
+    <value>TOTAL
+</value>
+  </data>
+  <data name="LBL_sum.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LBL_sum.Width" type="System.Single, mscorlib">
+    <value>2.236614</value>
+  </data>
+  <data name="Line32.Height" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line32.Left" type="System.Single, mscorlib">
+    <value>0.7515748</value>
+  </data>
+  <data name="Line32.Top" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line32.Width" type="System.Single, mscorlib">
+    <value>6.827953</value>
+  </data>
+  <data name="Line33.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line33.Left" type="System.Single, mscorlib">
+    <value>0.7515748</value>
+  </data>
+  <data name="Line33.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line33.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line34.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line34.Left" type="System.Single, mscorlib">
+    <value>7.583465</value>
+  </data>
+  <data name="Line34.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line34.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line9.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line9.Left" type="System.Single, mscorlib">
+    <value>2.988976</value>
+  </data>
+  <data name="Line9.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line9.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line11.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line11.Left" type="System.Single, mscorlib">
+    <value>4.433858</value>
+  </data>
+  <data name="Line11.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line11.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line13.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line13.Left" type="System.Single, mscorlib">
+    <value>5.991733</value>
+  </data>
+  <data name="Line13.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line13.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label2.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Label2.HyperLink" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Label2.Left" type="System.Single, mscorlib">
+    <value>0.7523623</value>
+  </data>
+  <data name="Label2.Style" xml:space="preserve">
+    <value>background-color: Gray; color: Black; font-family: MS Gothic; font-size: 10pt; font-weight: bold; text-align: center; text-justify: auto; vertical-align: middle; ddo-char-set: 1</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>SUM
+</value>
+  </data>
+  <data name="Label2.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label2.Width" type="System.Single, mscorlib">
+    <value>2.236614</value>
+  </data>
+  <data name="TextBox1.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBox1.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TextBox1.Left" type="System.Single, mscorlib">
+    <value>5.991733</value>
+  </data>
+  <data name="TextBox1.Style" xml:space="preserve">
+    <value>color: Black; font-weight: bold; text-align: left; vertical-align: middle</value>
+  </data>
+  <data name="TextBox1.SummaryGroup" xml:space="preserve">
+    <value>emp_cd</value>
+  </data>
+  <data name="TextBox1.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox1.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBox1.Width" type="System.Single, mscorlib">
+    <value>1.587795</value>
+  </data>
+  <data name="TextBox4.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBox4.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TextBox4.Left" type="System.Single, mscorlib">
+    <value>2.988976</value>
+  </data>
+  <data name="TextBox4.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="TextBox4.Style" xml:space="preserve">
+    <value>color: Black; font-weight: bold; text-align: right; vertical-align: middle</value>
+  </data>
+  <data name="TextBox4.SummaryGroup" xml:space="preserve">
+    <value>GroupHeader2</value>
+  </data>
+  <data name="TextBox4.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox4.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBox4.Width" type="System.Single, mscorlib">
+    <value>1.444882</value>
+  </data>
+  <data name="TextBox3.DistinctField" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBox3.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="TextBox3.Left" type="System.Single, mscorlib">
+    <value>4.439763</value>
+  </data>
+  <data name="TextBox3.OutputFormat" xml:space="preserve">
+    <value>#,##0</value>
+  </data>
+  <data name="TextBox3.Style" xml:space="preserve">
+    <value>color: Black; font-weight: bold; text-align: right; vertical-align: middle</value>
+  </data>
+  <data name="TextBox3.SummaryGroup" xml:space="preserve">
+    <value>GroupHeader2</value>
+  </data>
+  <data name="TextBox3.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox3.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBox3.Width" type="System.Single, mscorlib">
+    <value>1.557874</value>
+  </data>
+  <data name="Line10.Height" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line10.Left" type="System.Single, mscorlib">
+    <value>0.7523622</value>
+  </data>
+  <data name="Line10.Top" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line10.Width" type="System.Single, mscorlib">
+    <value>6.83307076</value>
+  </data>
+  <data name="Line14.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line14.Left" type="System.Single, mscorlib">
+    <value>0.7515748</value>
+  </data>
+  <data name="Line14.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line14.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line15.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line15.Left" type="System.Single, mscorlib">
+    <value>7.583464</value>
+  </data>
+  <data name="Line15.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line15.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line16.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line16.Left" type="System.Single, mscorlib">
+    <value>2.988976</value>
+  </data>
+  <data name="Line16.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line16.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line20.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line20.Left" type="System.Single, mscorlib">
+    <value>4.433858</value>
+  </data>
+  <data name="Line20.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line20.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line22.Height" type="System.Single, mscorlib">
+    <value>0.1968504</value>
+  </data>
+  <data name="Line22.Left" type="System.Single, mscorlib">
+    <value>5.991733</value>
+  </data>
+  <data name="Line22.Top" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Line22.Width" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.ScriptEditorPositionForUndo" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="$this.ScriptEditorPositionForRedo" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

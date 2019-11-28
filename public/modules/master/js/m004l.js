@@ -90,9 +90,6 @@ function initEvents() {
 		//btn search
 		$(document).on('click', '#btn-search', function() {
 			try {
-				// if (validate(_obj)) {
-					
-				// }
 				search(1);
 			} catch (e) {
 				alert('Eror #btn-search ' + e.message);

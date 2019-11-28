@@ -9,7 +9,7 @@ $col    = isset($col) ? $col : 'col-md-3 col-sm-3 col-xs-12';
      data-option4="{{$option4 or ''}}">
 	<div class="input-group" style="width: 100%">
 		<div style="display: inline-block;vertical-align: middle;width: 110px;">
-			<input maxlength="4" type="text" class="form-control left-radius right-radius refer-search company_cd text-right numeric {{isset($class)?$class:''}}" style="width: 80px;text-align: left"
+			<input maxlength="4" type="text" class="form-control left-radius right-radius refer-search company_cd text-right numeric {{isset($class)?$class:''}}" style="width: 80px;"
 				   value="{{ $key or '' }}" id="{{ $id or 'company_cd' }}" company_cd="">
 			<span class="input-group-btn">
 				<button type="button" class="btn btn-primary btn-icon btn-search" tabindex="5"><i class="icon-search4"></i></button>

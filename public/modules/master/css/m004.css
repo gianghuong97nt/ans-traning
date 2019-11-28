@@ -19,3 +19,6 @@
 .text-overfollow {
     max-width: 80px;
 }
+.span-label{
+	display: inline-block;
+}

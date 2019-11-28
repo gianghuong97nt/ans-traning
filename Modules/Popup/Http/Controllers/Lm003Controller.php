@@ -27,7 +27,6 @@ class Lm003Controller extends Controller
         $data['data']['istable']     = isset($aParams['istable']) ? $aParams['istable'] : 0;
         $data['data']['puredata']    = isset($aParams['puredata']) ? $aParams['puredata'] : 0;
         $data['data']['multi']       = $request->multi;
-        $data['searchFlag']          = 1;
         $data_screen                 = initSession($this->detailScreen, false);
         $data_screen['data_session'] = initSession($this->detailScreen, true);
 
@@ -42,10 +41,8 @@ class Lm003Controller extends Controller
         $param = $request->all();
         $param['company_cd_login'] = $request->session()->get('company_cd');
         $data  = Dao::call_stored_procedure('SPC_LM003_FND2', $param);
-
         return view('popup::search.searchlm003')
             ->with('data', $data)
-            ->with('searchFlag', 1)
             ->with('paging', $data[1][0]);
         }
     }
